@@ -16,9 +16,9 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRES_DB: testdb
-          POSTGRES_USER: testuser
-          POSTGRES_PASSWORD: testpass
+          POSTGRES_DB: authentapi
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: codeur47
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -36,7 +36,7 @@ jobs:
 
       - name: Build and Test
         env:
-          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/testdb
+          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/authentapi
           SPRING_DATASOURCE_USERNAME: postgres
           SPRING_DATASOURCE_PASSWORD: codeur47
         run: |
