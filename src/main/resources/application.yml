@@ -3,9 +3,9 @@ spring:
     name: Authent API
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/authentapi
-    username: postgres
-    password: codeur47
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/authentapi}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:codeur47}
     driver-class-name: org.postgresql.Driver
 
   jpa:
