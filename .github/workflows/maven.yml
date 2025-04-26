@@ -2,9 +2,9 @@ name: Build & Test Authent API
 
 on:
   push:
-    branches: [ main ]
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
